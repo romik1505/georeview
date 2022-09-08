@@ -1,0 +1,18 @@
+<div class="review-input">
+    <div class="review-container">
+        {{#if reviews}}
+            {{#each reviews}}
+                {{> ./review.hbs }}
+            {{/each}}
+        {{else}}
+            <div>Отзывов нет</div>
+        {{/if}}
+    </div>
+    <div class="review-form" data-coords="{{coords}}">
+        <p><b>Отзыв:</b></p>
+        <input type="text" id="name" placeholder="Укажите ваше имя"></br>
+        <input type="text" id="place" placeholder="Укажите место"></br>
+        <textarea type="text" id="review" placeholder="Ваш отзыв" maxlength="200" cols="21" rows="5"></textarea></br>
+        <button id="add__btn">Добавить</button>
+    </div>
+</div>
